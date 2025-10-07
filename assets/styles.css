@@ -5,6 +5,7 @@
   --muted: #6b7280;
   --max-width: 800px;
 }
+
 body {
   background: var(--background);
   color: var(--text);
@@ -13,6 +14,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .nav {
   display: flex;
   gap: 20px;
@@ -21,44 +23,55 @@ body {
   position: sticky;
   top: 0;
 }
+
 .nav a {
   color: var(--accent);
   font-weight: 600;
 }
+
 .container {
   max-width: var(--max-width);
   margin: 60px auto;
   padding: 0 24px;
 }
+
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
+
+/* 1. footer 규칙을 제대로 닫습니다. */
 footer {
-  text-align: center;.profile-container {
-  display: flex;
-  align-items: flex-start; /* 텍스트 위쪽 맞춤 */
-  gap: 1.5rem;             /* 이미지와 텍스트 사이 간격 */
-}
-
-.profile-img-left {
-  width: 60px;          /* 원하는 크기로 조절 */
-  height: auto;
-  object-fit: cover;     /* 비율 유지하며 잘라내기 */
-  border-radius: 8px;    /* 살짝 둥글게 */
-  flex-shrink: 0;        /* 이미지가 줄어들지 않게 */
-}
-
-.profile-content {
-  flex: 1;               /* 남은 공간을 채우도록 */
-}  margin-top: 60px;
+  text-align: center;
+  margin-top: 60px;
   padding: 20px 0;
   color: var(--muted);
 }
-/* Card-like container to place content in a centered box. */
+
+/* 2. 프로필 컨테이너와 이미지, 콘텐츠는 footer 밖에서 별도로 정의합니다. */
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.profile-img-left {
+  width: 60px;      /* 원하는 크기로 조절 */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.profile-content {
+  flex: 1;
+}
+
+/* 카드형 박스 스타일 */
 .box {
   background-color: #111111;
   border-radius: 12px;
   padding: 2rem 1.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
+
