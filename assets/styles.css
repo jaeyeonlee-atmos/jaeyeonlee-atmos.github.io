@@ -43,7 +43,7 @@ footer {
 
 .profile-img-left {
   width: 60px;          /* 원하는 크기로 조절 */
-  height: 60px;
+  height: auto;
   object-fit: cover;     /* 비율 유지하며 잘라내기 */
   border-radius: 8px;    /* 살짝 둥글게 */
   flex-shrink: 0;        /* 이미지가 줄어들지 않게 */
