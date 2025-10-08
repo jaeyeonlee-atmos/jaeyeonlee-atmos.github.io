@@ -51,12 +51,12 @@ footer {
 /* 2. 프로필 컨테이너와 이미지, 콘텐츠는 footer 밖에서 별도로 정의합니다. */
 .profile-container {
   display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 2rem;
 }
 
 .profile-img-left {
-  width: 100px;      /* 원하는 크기로 조절 */
+  width: 120px;      /* 원하는 크기로 조절 */
   height: auto;
   object-fit: cover;
   border-radius: 8px;
