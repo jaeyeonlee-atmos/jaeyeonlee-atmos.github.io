@@ -6,6 +6,7 @@
   --max-width: 800px;
 }
 
+/* 전체 배경 및 폰트 */
 body {
   background: var(--background);
   color: var(--text);
@@ -15,68 +16,79 @@ body {
   padding: 0;
 }
 
-.nav {
-  display: flex;
-  gap: 20px;
-  padding: 16px 24px;
-  background: #000000;
-  position: sticky;
-  top: 0;
-}
-
-.nav a {
-  color: var(--accent);
-  font-weight: 600;
-}
-
+/* 기본 컨테이너 */
 .container {
   max-width: var(--max-width);
   margin: 60px auto;
   padding: 0 24px;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-/* 1. footer 규칙을 제대로 닫습니다. */
-footer {
-  text-align: center;
-  margin-top: 60px;
-  padding: 20px 0;
-  color: var(--muted);
-}
-
-/* 2. 프로필 컨테이너와 이미지, 콘텐츠는 footer 밖에서 별도로 정의합니다. */
-.profile-container {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.profile-img-left {
-  width: 220px;      /* 원하는 크기로 조절 */
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-
-.profile-content {
-  flex: 1;
-}
-
-/* 카드형 박스 스타일 */
+/* 카드형 박스 */
 .box {
   background-color: #111111;
   border-radius: 12px;
   padding: 2rem 1.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
+
+/* 이미지 + 제목 + 부제목 한 줄 */
+.profile-header {
+  display: flex;
+  align-items: center; /* 세로 가운데 정렬 */
+  gap: 1.5rem;
+}
+
+/* 프로필 사진 크기 조절 */
+.profile-img-left {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* 이름(초록색) */
+.profile-titles h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* 부제목 (덜 크고 덜 굵게) */
+.subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+/* 본문: 사진 아래에서 시작 */
+.profile-bio {
+  margin-top: 1.5rem;
+}
+
+/* 문단 간격 */
+.profile-bio p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* 초록색 링크 */
+.accent-color {
+  color: var(--accent);
+}
+.accent-color:hover {
+  text-decoration: underline;
+}
+
+/* footer */
+footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
 
