@@ -42,7 +42,7 @@ body {
 /* 프로필 사진 크기 */
 .profile-img-left {
   width: 150px;
-  height: 150px;
+  height: 180px;
   object-fit: cover;
   border-radius: 8px;
   flex-shrink: 0;
