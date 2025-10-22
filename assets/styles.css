@@ -1,12 +1,13 @@
 :root {
-  --accent: #118612;
+  --accent-strong: #118612;   /* 진한 초록색 */
+  --accent-light: #45c056;    /* 연한 초록색 */
   --background: #0a0a0a;
   --text: #f5f5f5;
   --muted: #6b7280;
   --max-width: 800px;
 }
 
-/* 전체 배경 및 폰트 */
+/* 기본 설정 */
 body {
   background: var(--background);
   color: var(--text);
@@ -16,14 +17,14 @@ body {
   padding: 0;
 }
 
-/* 기본 컨테이너 */
+/* 중앙 컨테이너 */
 .container {
   max-width: var(--max-width);
   margin: 60px auto;
   padding: 0 24px;
 }
 
-/* 카드형 박스 */
+/* 박스형 카드 */
 .box {
   background-color: #111111;
   border-radius: 12px;
@@ -31,14 +32,14 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* 이미지 + 제목 + 부제목 한 줄 */
+/* 사진 + 텍스트 수평 정렬 */
 .profile-header {
   display: flex;
-  align-items: center; /* 세로 가운데 정렬 */
+  align-items: center;
   gap: 1.5rem;
 }
 
-/* 프로필 사진 크기 조절 */
+/* 프로필 사진 크기 */
 .profile-img-left {
   width: 150px;
   height: 150px;
@@ -47,39 +48,41 @@ body {
   flex-shrink: 0;
 }
 
-/* 이름(초록색) */
-.profile-titles h1 {
+/* 이름 (진한 초록색) */
+.name-color {
   margin: 0;
   font-size: 2.2rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--accent-strong);
 }
 
-/* 부제목 (덜 크고 덜 굵게) */
+/* 부제목 (연한 초록색, 덜 굵게) */
 .subtitle {
   margin: 0.35rem 0 0;
   font-size: 1.3rem;
   font-weight: 500;
+  color: var(--accent-light);
   line-height: 1.35;
-  color: var(--text);
 }
 
-/* 본문: 사진 아래에서 시작 */
+/* 본문 */
 .profile-bio {
   margin-top: 1.5rem;
 }
 
-/* 문단 간격 */
 .profile-bio p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-/* 초록색 링크 */
-.accent-color {
-  color: var(--accent);
+/* 하단 링크들 (진한 초록색) */
+.accent-link {
+  color: var(--accent-strong);
+  font-weight: 500;
+  text-decoration: none;
 }
-.accent-color:hover {
+
+.accent-link:hover {
   text-decoration: underline;
 }
 
@@ -90,5 +93,6 @@ footer {
   text-align: center;
   color: var(--muted);
 }
+
 
 
